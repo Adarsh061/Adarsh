@@ -1,0 +1,26 @@
+class Solution {
+public:
+ 
+    int countDigits(int num) {
+        int ogNum = num;
+        int count = 0;
+
+
+    // Extract digits and count those which divide the number
+    while (num > 0) {
+        int digit = num % 10;
+        if (digit != 0 && ogNum % digit == 0) {
+            count++;
+        }
+        num /= 10;
+    }
+
+    return count;
+}
+
+
+ 
+
+
+    
+};
